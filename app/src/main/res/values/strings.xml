@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">StudyBuddy</string>
+
+    <!--Event Activity Strings-->
+    <string name="event_title_hint">Title</string>
+    <string name="event_description_hint">Description</string>
+    <string name="event_start_label">Start</string>
+    <string name="event_end_label">End</string>
+
+    <!-- Category Color Strings -->
+    <string name="category_color_red">Red</string>
+    <string name="category_color_pink">Pink</string>
+    <string name="category_color_purple">Purple</string>
+    <string name="category_color_blue">Blue</string>
+    <string name="category_color_light_blue">Light Blue</string>
+    <string name="category_color_green">Green</string>
+    <string name="category_color_yellow">Yellow</string>
+    <string name="category_color_orange">Orange</string>
+    <string name="category_color_brown">Brown</string>
+    <string name="category_color_grey">Grey</string>
+
+
+    <string name="event_done">Done</string>
+    <string name="add_category_button_description">Add Category</string>
+
+    <string name="event_delete">Delete</string>
+    <string name="scheduled_event_hour">Hour</string>
+    <string name="scheduled_event_minutes">Minutes</string>
+    <string name="scheduled_event_due_date_label">Due Date</string>
+    <string name="add_category_title">Add Category</string>
+
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_scrollview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/scheduled_event_title"
+            style="@style/EventEditText"
+            android:hint="@string/event_title_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/scheduled_event_description"
+            style="@style/EventEditText"
+            android:hint="@string/event_description_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_event_title" />
+
+        <Spinner
+            android:id="@+id/scheduled_spinner_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginRight="72dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_event_description" />
+
+        <ImageButton
+            android:id="@+id/scheduled_add_category_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:onClick="onAddCategoryButtonClicked"
+            android:src="@drawable/ic_add_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/scheduled_spinner_categories"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scheduled_spinner_categories"
+            android:contentDescription="@string/add_category_button_description" />
+
+        <EditText
+            android:id="@+id/scheduled_event_time_hour"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/scheduled_event_hour"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_spinner_categories" />
+
+        <EditText
+            android:id="@+id/scheduled_event_time_minutes"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="@string/scheduled_event_minutes"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_spinner_categories" />
+
+        <TextView
+            android:id="@+id/tv_scheduled_event_due_date_label"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/scheduled_event_due_date_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_event_time_minutes" />
+
+        <TextView
+            android:id="@+id/tv_scheduled_event_due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_scheduled_event_due_date_label"
+            app:layout_constraintStart_toStartOf="@+id/tv_scheduled_event_due_date_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_scheduled_event_due_date_label"
+            tools:text="January 1, 2019" />
+
+        <TextView
+            android:id="@+id/tv_scheduled_event_due_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="@+id/tv_scheduled_event_due_date"
+            app:layout_constraintStart_toStartOf="@+id/tv_scheduled_event_due_date"
+            app:layout_constraintTop_toBottomOf="@+id/tv_scheduled_event_due_date"
+            tools:text="00:00" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
